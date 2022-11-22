@@ -16,12 +16,10 @@ namespace CanWeFixItService
             _database = database;
         }
         
-        // GET HELLO
+        // GET 
         public async Task<ActionResult<IEnumerable<Instrument>>> Get()
         {   
             return await Ok(_database.Instruments().Result);
         }
     }
 }
-
-//Hello
