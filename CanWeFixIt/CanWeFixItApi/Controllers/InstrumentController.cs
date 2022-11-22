@@ -2,7 +2,8 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CanWeFixItApi.Controllers
+//namespace CanWeFixItApi.Controllers
+namespace CanWeFixItService
 {
     [ApiController]
     [Route("v1/instruments")]
@@ -18,7 +19,7 @@ namespace CanWeFixItApi.Controllers
         // GET
         public async Task<ActionResult<IEnumerable<Instrument>>> Get()
         {   
-            return Ok(_database.Instruments().Result);
+            return await Ok(_database.Instruments().Result);
         }
     }
 }
