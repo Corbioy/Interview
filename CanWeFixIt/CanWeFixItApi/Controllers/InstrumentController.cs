@@ -16,7 +16,7 @@ namespace CanWeFixItService
             _database = database;
         }
         
-        // GET
+        // GET HELLO
         public async Task<ActionResult<IEnumerable<Instrument>>> Get()
         {   
             return await Ok(_database.Instruments().Result);
